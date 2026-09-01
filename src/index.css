@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-racing-dark text-white overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .checkered-flag {
+    background-image: repeating-conic-gradient(var(--tw-gradient-stops));
+    background-size: 20px 20px;
+  }
+}
