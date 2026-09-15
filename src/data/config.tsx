@@ -18,7 +18,17 @@ export const profileData = {
 // Set to null to hide the featured link for now
 export const featuredLink: any = null;
 
+const TechneIcon = () => (
+  <img src="/techne.webp" alt="Techne" className="h-6 w-auto object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300" />
+);
+
 export const socialLinks = [
+  {
+    title: "Techne Summit",
+    url: "https://technesummit.com/2026",
+    icon: TechneIcon,
+    color: "group-hover:text-blue-500 bg-black/40",
+  },
   {
     title: "Facebook",
     url: "https://www.facebook.com/ApexRTe",
