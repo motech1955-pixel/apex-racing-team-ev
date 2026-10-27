@@ -27,6 +27,7 @@ export default {
         'glow-pulse': 'glowPulse 2s infinite',
         'spin-slow': 'spin 3s linear infinite',
         'sweep': 'sweep 1.5s ease-in-out infinite',
+        'marquee': 'marquee 22s linear infinite',
       },
       keyframes: {
         speedLine: {
@@ -44,7 +45,11 @@ export default {
         sweep: {
           '0%': { transform: 'translateX(-100%) skewX(12deg)' },
           '100%': { transform: 'translateX(200%) skewX(12deg)' },
-        }
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       }
     },
   },

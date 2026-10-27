@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ProfileHeader } from './components/ProfileHeader';
 import { Achievements } from './components/Achievements';
+import { TeamJourneyModal } from './components/TeamJourneyModal';
+import { SponsorsTicker } from './components/SponsorsTicker';
 import { SocialLink } from './components/SocialLink';
 import { FeaturedLink } from './components/FeaturedLink';
 import { RacingBackground } from './components/RacingBackground';
@@ -10,6 +12,7 @@ import { socialLinks } from './data/config';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [isJourneyOpen, setIsJourneyOpen] = useState(false);
 
   // Simulate dashboard starting up
   useEffect(() => {
@@ -22,6 +25,12 @@ function App() {
   return (
     <div className="min-h-screen font-sans selection:bg-racing-red selection:text-white">
       <RacingBackground />
+
+      {/* Team Journey & Full Track Record Modal */}
+      <TeamJourneyModal
+        isOpen={isJourneyOpen}
+        onClose={() => setIsJourneyOpen(false)}
+      />
 
       <AnimatePresence>
         {loading ? (
@@ -67,7 +76,7 @@ function App() {
             >
               <ProfileHeader />
               
-              <Achievements />
+              <Achievements onOpenJourney={() => setIsJourneyOpen(true)} />
               
               <div className="w-full max-w-md mt-2">
                 <FeaturedLink />
@@ -90,6 +99,11 @@ function App() {
                     />
                   ))}
                 </div>
+              </div>
+
+              {/* Sponsors & Partners Infinite Ticker */}
+              <div className="w-full max-w-md mt-6">
+                <SponsorsTicker />
               </div>
             </motion.div>
 

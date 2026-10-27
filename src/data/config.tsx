@@ -1,4 +1,5 @@
 import { FaInstagram, FaLinkedin, FaYoutube, FaWhatsapp, FaEnvelope, FaFacebook, FaPhone } from 'react-icons/fa';
+
 export const profileData = {
   name: "APEX RACING TEAM",
   tagline: "Racing • Engineering • Technology",
@@ -18,17 +19,7 @@ export const profileData = {
 // Set to null to hide the featured link for now
 export const featuredLink: any = null;
 
-const TechneIcon = () => (
-  <img src="/techne.webp" alt="Techne" className="h-6 w-auto object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300" />
-);
-
 export const socialLinks = [
-  {
-    title: "Techne Summit",
-    url: "https://technesummit.com/2026",
-    icon: TechneIcon,
-    color: "group-hover:text-blue-500 bg-black/40",
-  },
   {
     title: "Facebook",
     url: "https://www.facebook.com/ApexRTe",
@@ -72,3 +63,103 @@ export const socialLinks = [
     color: "group-hover:text-green-500",
   }
 ];
+
+// Sponsors & Partners
+export const sponsorsList = [
+  {
+    name: "EGYPTAIR",
+    logo: "/sponsors/egyptair.png",
+  },
+  {
+    name: "SOLIDWORKS",
+    logo: "/sponsors/solidworks.png",
+  },
+  {
+    name: "MATLAB",
+    logo: "/sponsors/matlab.png",
+  },
+];
+
+// Team Information & Full Track Journey (From Team Presentation)
+export const teamInfo = {
+  title: "WHO WE ARE",
+  subtitle: "Higher Technological Institute (HTI) • 10th of Ramadan City",
+  description: "Apex Racing Team EV is an Egyptian student motorsport team founded in 2018 at HTI. Since inception, we have built more than 13 competitive Electric Vehicles across 4 international and regional competitions (EVER, SEM, FS, GVEC).",
+  mission: "To compete fiercely at the highest international level so we can transfer cutting-edge engineering expertise and empower future generations.",
+  vision: "To spearhead automotive innovation, contribute directly to Egypt's Vision 2030, and pioneer the development of self-driving autonomous electric vehicles.",
+  stats: [
+    { value: "13+", label: "Vehicles Built", detail: "Urban Concept & Formula Student" },
+    { value: "8+", label: "Years on Track", detail: "Founded in 2018" },
+    { value: "4", label: "Competitions", detail: "EVER • SEM • FS • GEVC" },
+    { value: "1st", label: "Worldwide & Local", detail: "Podiums & Victories" },
+  ],
+  journey: [
+    {
+      year: "2018",
+      highlight: "Inception & First Podiums",
+      events: [
+        { title: "EVER Egypt", detail: "3rd Place Overall & 1st Business Plan" },
+      ]
+    },
+    {
+      year: "2019",
+      highlight: "National Champions",
+      events: [
+        { title: "EVER Egypt", detail: "🏆 1st Place Overall Champion" },
+        { title: "Formula Student UK", detail: "15th Place Overall" },
+      ]
+    },
+    {
+      year: "2020",
+      highlight: "Endurance & Strategy Masters",
+      events: [
+        { title: "EVER Egypt", detail: "1st Business Plan & 1st Endurance" },
+        { title: "Formula Student UK", detail: "🥉 3rd out of 32 International Teams" },
+      ]
+    },
+    {
+      year: "2021",
+      highlight: "Global Supremacy",
+      events: [
+        { title: "GEVC", detail: "🏆 1st Place Worldwide" },
+        { title: "Formula Student UK", detail: "🥇 1st in Cost & Manufacturing" },
+      ]
+    },
+    {
+      year: "2022",
+      highlight: "The Quadruple Victory",
+      events: [
+        { title: "EVER Egypt", detail: "🏆 1st Overall, 1st Drag, 1st Autocross & Most Efficient" },
+      ]
+    },
+    {
+      year: "2023",
+      highlight: "Shell Eco-marathon Debut",
+      events: [
+        { title: "Shell Eco-marathon", detail: "🥈 2nd Place Podium" },
+      ]
+    },
+    {
+      year: "2024",
+      highlight: "Defending the Crown",
+      events: [
+        { title: "EVER Egypt", detail: "🏆 1st Place Overall" },
+        { title: "Formula Student UK", detail: "14th in Concept Design" },
+      ]
+    },
+    {
+      year: "2026",
+      highlight: "Silverstone Excellence",
+      events: [
+        { title: "Formula Student UK", detail: "🏎️ 7th Overall & 🥈 2nd in Cost & Manufacturing" },
+      ]
+    },
+    {
+      year: "2027?",
+      highlight: "The Next Era",
+      events: [
+        { title: "Autonomous EV & Future Racing", detail: "⚡ To be written by us..." },
+      ]
+    },
+  ]
+};

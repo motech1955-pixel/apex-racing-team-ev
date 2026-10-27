@@ -1,7 +1,12 @@
 import { motion } from 'framer-motion';
 import { profileData } from '../data/config';
+import { FaFlagCheckered, FaChevronRight } from 'react-icons/fa';
 
-export const Achievements = () => {
+interface AchievementsProps {
+  onOpenJourney?: () => void;
+}
+
+export const Achievements: React.FC<AchievementsProps> = ({ onOpenJourney }) => {
   return (
     <div className="w-full max-w-md mt-2 mb-6 flex flex-col items-center">
       {/* Quote */}
@@ -49,6 +54,37 @@ export const Achievements = () => {
           </motion.div>
         ))}
       </div>
+
+      {/* Button to Open Full Journey & History Modal */}
+      {onOpenJourney && (
+        <motion.button
+          onClick={onOpenJourney}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.4 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          className="mt-4 w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-racing-red/20 via-racing-gray/40 to-racing-red/20 border border-racing-red/40 hover:border-racing-red hover:bg-racing-red/25 transition-all duration-300 flex items-center justify-between group shadow-[0_0_15px_rgba(229,9,20,0.15)]"
+        >
+          <div className="flex items-center gap-2.5">
+            <span className="p-1.5 rounded-lg bg-racing-red/20 text-racing-red border border-racing-red/30 group-hover:scale-110 transition-transform">
+              <FaFlagCheckered size={12} />
+            </span>
+            <div className="text-left">
+              <span className="text-xs font-black uppercase tracking-wider text-white italic block">
+                Team Story & 8-Year Track Record
+              </span>
+              <span className="text-[10px] font-mono text-gray-400 block">
+                13+ Cars • 4 Series • 2018—2026
+              </span>
+            </div>
+          </div>
+          <div className="flex items-center gap-1 text-racing-red group-hover:translate-x-1 transition-transform">
+            <span className="text-[11px] font-mono font-bold uppercase hidden xs:inline">Details</span>
+            <FaChevronRight size={11} />
+          </div>
+        </motion.button>
+      )}
     </div>
   );
 };
