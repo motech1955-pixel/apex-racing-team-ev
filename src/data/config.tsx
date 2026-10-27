@@ -64,19 +64,39 @@ export const socialLinks = [
   }
 ];
 
-// Sponsors & Partners
+// Sponsors, Partners & Events
 export const sponsorsList = [
   {
     name: "EGYPTAIR",
     logo: "/sponsors/egyptair.png",
   },
   {
+    name: "AOI - الهيئة العربية للتصنيع",
+    logo: "/sponsors/aoi.png",
+  },
+  {
     name: "SOLIDWORKS",
     logo: "/sponsors/solidworks.png",
   },
   {
+    name: "Ansys",
+    logo: "/sponsors/ansys.png",
+  },
+  {
     name: "MATLAB",
     logo: "/sponsors/matlab.png",
+  },
+  {
+    name: "AUTOTECH",
+    logo: "/sponsors/autotech.png",
+  },
+  {
+    name: "Techne Summit",
+    logo: "/sponsors/techne.png",
+  },
+  {
+    name: "TCF",
+    logo: "/sponsors/tcf.png",
   },
 ];
 
