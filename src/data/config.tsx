@@ -98,6 +98,14 @@ export const sponsorsList = [
     name: "TCF",
     logo: "/sponsors/tcf.png",
   },
+  {
+    name: "IPG Automotive",
+    logo: "/sponsors/ipg.png",
+  },
+  {
+    name: "OFF CAMPUS",
+    logo: "/sponsors/offcampus.png",
+  },
 ];
 
 // Team Information & Full Track Journey (From Team Presentation)
